@@ -13,7 +13,7 @@
         <input type="text" name="pole">
         <button type="submit">Pokaż </button>
         </form>
-<div class="wynik"> wynik</div>
+<div class="wynik"> </div>
         <script> 
         //odwolujemy sie do formularza (pobieramy obiekt)
 
@@ -31,9 +31,21 @@
 
     const poleWFormularzu = document.querySelector('input[name=pole]').value;
 
+    if(poleWFormularzu %2==0){
+
     
+        wynik.textContent= 'liczba jest parzysta'
+    }
+    else {
+        wynik.textContent='liczba jest nieparzysta';
+
+    }
+
+
+
         //wyswietlamy w div wartosc Pola.
         wynik.textContent=poleWFormularzu;
+        
     });
         </script>
 </body>
