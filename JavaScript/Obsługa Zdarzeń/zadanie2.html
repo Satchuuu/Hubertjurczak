@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        background-color: violet;
+    }
+</style>
+<div>
+    <h1> Wspólrzedne myszy X:</h1>
+    <h1> Wspólrzedne myszy Y:</h1>
+    <h1> Nacisniety guzior: </h1>
+</div>
+
+<body>
+
+    <script>
+        //poiberamy h1
+
+        const naglowkiH1 = document.querySelectorAll('h1');
+
+        document.addEventListener('mousemove', function(event) {
+            //współrzędna X kursora myszy - event.klientX
+            //Współrzedna Y kursora myszy - event.klientY
+
+            naglowkiH1[0].textContent = `Współrzedna X kursora myszy: ${event.clientX}`;
+
+            naglowkiH1[1].textContent = `Współrzedna y kursora myszy: ${event.clientY}`;
+        });
+        document.addEventListener('keydown', function(event){
+            //jaki klawisz nacisnieto
+            naglowkiH1[2].textContent += `${event.key}`;
+        })
+    </script>
+ 
+</body>
+</html>
