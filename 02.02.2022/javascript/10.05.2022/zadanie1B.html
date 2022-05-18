@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="POST"></form>
+        <input type="radio" name="radio1" value="a">
+        <input type="radio" name="radio1" value="b">
+        <input type="radio" name="radio1" value="c">
+        <input type="radio" name="radio1" value="d">
+        <input type="radio" name="radio1" value="e">
+        <input type="radio" name="radio1" value="f">
+        <button type="submit" name="guzior"></button>
+    </form>
+    
+    <div id="xd"></div>
+    
+    <script>
+        //Umieść na stronie kilka pól wyboru typu radio tworzących grupę (wzajemnie wykluczających się) oraz przycisk.
+         //Po kliknięciu przycisku na stronie ma zostać wyświetlona informacja o tym, które z pól jest zaznaczone.
+        
+        
+
+        const guzik = document.querySelector('button');
+        const div = document.querySelector('#xd')
+
+        guzik.addEventListener('click' , function(e){
+            e.preventDefault();
+            const radio1 = document.querySelectorAll('input[name="radio1"]');
+            div.textContent = radio1;
+        });
+
+        for(let i=0; i<5; i++){
+            if(radio1[i].checked) {
+                div.textContent=radio1[i].value
+            }
+        }
+        
+    </script>
+</body>
+</html>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Se
