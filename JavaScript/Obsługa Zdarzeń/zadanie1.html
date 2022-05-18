@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non mi at ante hendrerit sodales a eget sapien. Duis in ullamcorper lacus, at lacinia nulla. Donec vel ligula metus. Nulla facilisi.
+    </div>
+
+    <style>
+        div{
+            padding: 50px;
+            background-color: black;
+            color: yellow;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifs;
+        }
+    </style>
+
+
+    <script>
+
+    function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+        const div=document.querySelector('div');
+        const colors = ["red", "green", "orange", "blue"]
+
+        //przepisujemy usluge zdarzenia klikniecia mysza
+
+        div.addEventListener('click', function(){
+            //zmiana koloru czcionki 
+            let loss = getRandomIntInclusive(0,4);
+            div.style.color= colors[loss];
+        });
+        
+
+        //zdarzenia
+
+        div.addEventListener('mouseover', function(){
+                div.textContent = "git";
+                
+            });
+
+    </script>
+</body>
+</html>
