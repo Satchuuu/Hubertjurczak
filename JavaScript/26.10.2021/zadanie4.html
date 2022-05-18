@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <input type="text" name="a1" placeholder="Wartość początkowa przedziału">
+        <input type="text" name="a2" placeholder="Wartość końcowa przedziału">
+        <input type="text" name="a3" placeholder="Liczba to: ">
+        <button type="submit"> Pokaż </button>
+        </form>
+
+    <div class="wynik">
+    </div>
+        <script> 
+            const formularz = document.querySelector('form');
+            const wynik=document.querySelector('.wynik');
+
+            formularz.addEventListener('submit', (e) => {
+            e.preventDefault();
+                const a = document.querySelector('input[name=a1]').value;
+                const b = document.querySelector('input[name=a2]').value;
+                const cyfra = document.querySelector('input[name=a3]').value;
+
+                if(cyfra >= a && cyfra <= b)
+                {
+                     wynik.textContent = 'Cyfra jest w przedziale';
+                       
+                }
+                else{
+                    wynik.textContent = 'Cyfra nie jest w przedziale';
+                }        
+    });
+        </script>
+</body>
+</html>
