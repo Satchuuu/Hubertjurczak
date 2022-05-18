@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+    <script>
+        
+        /* Napisz program, który utworzy tablicę i zapełni ją 100 losowymi liczbami z zakresu 0-100, 
+        a następnie obliczy sumę liczb tej tablicy, ilość zer oraz częstość wystąpień zadanej wartości. */
+
+        const liczby = [];
+        for(let i = 0; i <100; i++) {
+        liczby[i] = Math.round(Math.random() * 100);
+        }
+
+        document.write(liczby.join(', '));
+    </script>
+</body>
+</html>
